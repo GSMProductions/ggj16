@@ -4,7 +4,8 @@ using System.Collections;
 public class PressurePlate : MonoBehaviour {
 
     public bool pressed = false;
-
+    public const string GRABABLE_TAG = "grabable";
+    public const string PLAYER_TAG = "Player";
     Animator animator;
     
     // Use this for initialization
@@ -17,11 +18,15 @@ public class PressurePlate : MonoBehaviour {
 	   animator.SetBool("Pressed", pressed);
 	}
 
-    void OnTriggerEnter() {
-        pressed = true;
+    void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == GRABABLE_TAG || other.gameObject.tag == PLAYER_TAG) {
+            pressed = true;
+        }
     }
 
-    void OnTriggerExit() {
-        pressed = false;
+    void OnTriggerExit(Collider other) {
+        if(other.gameObject.tag == GRABABLE_TAG || other.gameObject.tag == PLAYER_TAG) {
+            pressed = false;
+        }
     }
 }

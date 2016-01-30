@@ -19,7 +19,6 @@ public class Stuck : MonoBehaviour {
         if(other.gameObject.tag == GRABABLE_TAG) {
             if(! Input.GetMouseButton(0)) {
                 object_in = other.transform;
-                object_in.parent = transform;
                 object_in.position = transform.position;
                 object_in.GetComponent<Rigidbody>().useGravity = false;
                 object_in.GetComponent<Rigidbody>().velocity = Vector3.zero;
