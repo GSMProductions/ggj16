@@ -8,7 +8,7 @@ public class Puzzle2Manager : MonoBehaviour {
     private bool complete = false;
 
     private bool started = false;
-    public Animation laser_rise;
+    public Animation[] to_rise;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +23,9 @@ public class Puzzle2Manager : MonoBehaviour {
         print(initial_location.object_in);
         if (initial_location.object_in == null && !started) {
             started = true;
-            laser_rise.Play();
+            foreach(Animation rise in to_rise) {
+                rise.Play();
+            }
         }
     }
 
