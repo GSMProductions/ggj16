@@ -5,6 +5,7 @@ public class Grab : MonoBehaviour {
 
 public const string GRABABLE_TAG = "grabable";
 public Transform object_grabable = null;
+Quaternion originalRotation = Quaternion.identity;
 
     void Update() {
         if(Input.GetMouseButton(0)) {
@@ -20,8 +21,9 @@ public Transform object_grabable = null;
     }
 
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == GRABABLE_TAG) {
+        if(other.gameObject.tag == GRABABLE_TAG && object_grabable == null) {
             object_grabable = other.transform;
+            originalRotation = object_grabable.transform.rotation;
         }
     }
 
@@ -35,7 +37,7 @@ public Transform object_grabable = null;
         try{
             object_grabable.GetComponent<Rigidbody>().useGravity = false;
             object_grabable.GetComponent<Rigidbody>().velocity = Vector3.zero;
-             object_grabable.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+            object_grabable.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
         catch{
         }
@@ -46,6 +48,7 @@ public Transform object_grabable = null;
     private void unGrab() {
         try{
             object_grabable.GetComponent<Rigidbody>().useGravity = true;
+            object_grabable.transform.rotation = originalRotation;
         }
         catch{
         }
