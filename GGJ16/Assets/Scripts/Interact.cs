@@ -29,7 +29,7 @@ public class Interact : MonoBehaviour {
     }
 
     void OnTriggerExit(Collider other) {
-        if(other.gameObject.GetComponent<InteractiveObject>() == interactive_object) {
+        if(other.gameObject.GetComponent<InteractiveObject>() &&  other.gameObject.GetComponent<InteractiveObject>() == interactive_object) {
             interactive_object.active = false;
             interactive_object = null;
         }
