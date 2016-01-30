@@ -6,6 +6,7 @@ TagManager:
   tags:
   - grabable
   - interactive
+  - decor
   layers:
   - Default
   - TransparentFX
