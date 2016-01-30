@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - grabable
-  - New Tag
+  - decor
   layers:
   - Default
   - TransparentFX
