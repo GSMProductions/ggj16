@@ -10,7 +10,7 @@ public class TransitionManager : MonoBehaviour {
     private int backdrops_removed = 0;
 
     private float timer;
-
+    public int current_puzzle = 1;
 
     void Start() {
         
@@ -39,6 +39,7 @@ public class TransitionManager : MonoBehaviour {
         }
         backdrops_removed += backdrops_left;
         backdrops_left = 0;
+        current_puzzle = puzzle+1;
 
     }
 }

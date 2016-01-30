@@ -25,6 +25,7 @@ public class LightRay : MonoBehaviour {
         
         if(Physics.Raycast(ray, out hit, 100)) {
             line.SetPosition(1, hit.point);
+            Debug.DrawLine(transform.position, hit.point, Color.red);
             if (hit.collider.gameObject.tag == "grabable") {
                 if (ray_target) {
                     line_from_sphere.enabled = true;   
