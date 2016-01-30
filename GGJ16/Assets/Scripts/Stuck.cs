@@ -26,7 +26,9 @@ public class Stuck : MonoBehaviour {
         }
     }
 
-    void OnTriggerExit() {
-        object_in = null;
+    void OnTriggerExit(Collider other) {
+        if(other.gameObject.tag == GRABABLE_TAG) {
+            object_in = null;
+        }
     }
 }
