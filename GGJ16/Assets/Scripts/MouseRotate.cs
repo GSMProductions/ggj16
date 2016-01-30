@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (InteractiveObject))]
 public class MouseRotate : MonoBehaviour {
 
     public float speed;
@@ -15,7 +16,7 @@ public class MouseRotate : MonoBehaviour {
     private Quaternion toRotation;
 
     void Update () {
-        if(Input.GetMouseButton(0)) {
+        if(Input.GetMouseButton(0) && GetComponent<InteractiveObject>().active) {
             xDeg -= Input.GetAxis("Mouse X") * speed * friction;
             yDeg += Input.GetAxis("Mouse Y") * speed * friction;
         }
