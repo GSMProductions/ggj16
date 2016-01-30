@@ -5911,15 +5911,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
       propertyPath: m_TagString
