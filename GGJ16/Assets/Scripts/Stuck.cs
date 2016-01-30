@@ -16,14 +16,15 @@ public class Stuck : MonoBehaviour {
 	}
 
     void OnTriggerStay(Collider other) {
-        if(other.gameObject.tag == GRABABLE_TAG) {
-            if(! Input.GetMouseButton(0)) {
-                object_in = other.transform;
-                object_in.position = transform.position;
-                object_in.GetComponent<Rigidbody>().useGravity = false;
-                object_in.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                object_in.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
-            }
+        if(other.gameObject.tag == GRABABLE_TAG && !Input.GetMouseButton(0)) {
+            object_in = other.transform;
+            object_in.position = transform.position;
+            object_in.GetComponent<Rigidbody>().useGravity = false;
+            object_in.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            object_in.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        }
+        else {
+            object_in = null;
         }
     }
 }
