@@ -999,6 +999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &336933622
 Animator:
   serializedVersion: 3
@@ -1453,6 +1454,12 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c4fb0e2d26102144b836822e6a326f08, type: 3}
   m_PrefabInternal: {fileID: 1646691576}
+--- !u!114 &578793624 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11466026, guid: dd382cd12c32cb74fbd29813da49a07a,
+    type: 2}
+  m_PrefabInternal: {fileID: 160595364}
+  m_Script: {fileID: 11500000, guid: 9add92257b70e7e4db17ec5142b2203f, type: 3}
 --- !u!1001 &599182672
 Prefab:
   m_ObjectHideFlags: 0
@@ -1647,6 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &883685970
 Animator:
   serializedVersion: 3
@@ -1746,6 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &956273384
 Animator:
   serializedVersion: 3
@@ -1922,10 +1931,14 @@ MonoBehaviour:
   - {fileID: 181820851}
   - {fileID: 813684280}
   - {fileID: 750530650}
+  - {fileID: 1999607575}
+  - {fileID: 578793624}
   timings:
   - 1
   - 3
   - 4
+  - 3
+  - 3
   current_puzzle: 1
 --- !u!4 &1164147622
 Transform:
@@ -2114,6 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &1280402971
 Animator:
   serializedVersion: 3
@@ -2488,7 +2502,7 @@ Prefab:
       objectReference: {fileID: 115177171}
     - target: {fileID: 11466026, guid: dd382cd12c32cb74fbd29813da49a07a, type: 2}
       propertyPath: accelaration.x
-      value: -4
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 180442, guid: dd382cd12c32cb74fbd29813da49a07a, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -2705,6 +2719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &1591871071
 Animator:
   serializedVersion: 3
@@ -2851,6 +2866,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1671718361}
   - 114: {fileID: 1671718362}
+  - 111: {fileID: 1671718363}
   m_Layer: 0
   m_Name: Puzzle2Manager
   m_TagString: Untagged
@@ -2890,6 +2906,25 @@ MonoBehaviour:
   to_rise:
   - {fileID: 401039490}
   - {fileID: 479049193}
+  sequence:
+  - {fileID: 1794289877}
+  - {fileID: 1280402970}
+  entered_sequence: []
+--- !u!111 &1671718363
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671718360}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7c6b2aad84d63f545b062ff286e60b3f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7c6b2aad84d63f545b062ff286e60b3f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1677492661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,6 +3188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!65 &1794289878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3359,6 +3395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &1930574991
 Animator:
   serializedVersion: 3
@@ -3474,6 +3511,12 @@ Transform:
   - {fileID: 336933620}
   m_Father: {fileID: 479049194}
   m_RootOrder: 5
+--- !u!114 &1999607575 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11466026, guid: dd382cd12c32cb74fbd29813da49a07a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434175382}
+  m_Script: {fileID: 11500000, guid: 9add92257b70e7e4db17ec5142b2203f, type: 3}
 --- !u!1 &2026786294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,6 +3702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
+  p2manager: {fileID: 0}
 --- !u!95 &2068519636
 Animator:
   serializedVersion: 3
