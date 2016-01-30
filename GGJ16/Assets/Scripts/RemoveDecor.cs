@@ -5,8 +5,12 @@ public class RemoveDecor : MonoBehaviour {
     public bool remove_object = false;
     public Vector3 accelaration = Vector3.zero;
     public Vector3 accelaration_max = Vector3.zero;
+    public Collider room_collider;
 
     void Start() {
+
+        Physics.IgnoreCollision(room_collider, GetComponent<Collider>());
+        
         float x, y, z;
         x = accelaration.x;
         y = accelaration.y;
