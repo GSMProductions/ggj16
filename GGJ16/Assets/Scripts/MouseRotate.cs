@@ -17,8 +17,8 @@ public class MouseRotate : MonoBehaviour {
 
     void Update () {
         if(Input.GetMouseButton(0) && GetComponent<InteractiveObject>().active) {
-            xDeg -= Input.GetAxis("Mouse X") * speed * friction;
-            yDeg += Input.GetAxis("Mouse Y") * speed * friction;
+            xDeg += Input.GetAxis("Mouse X") * speed * friction;
+            yDeg -= Input.GetAxis("Mouse Y") * speed * friction;
         }
         fromRotation = transform.rotation;
         toRotation = Quaternion.Euler(yDeg,xDeg,0);
