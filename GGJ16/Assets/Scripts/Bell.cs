@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (AudioSource))]
 public class Bell : MonoBehaviour {
 
     public BellsManager manager = null;
@@ -15,7 +16,7 @@ public class Bell : MonoBehaviour {
 	}
 
     void OnTriggerStay(Collider other) {
-        if(Input.GetMouseButtonDown(0) && !GetComponent<AudioSource>().isPlaying) {
+        if(Input.GetMouseButtonDown(0)) {
             GetComponent<AudioSource>().Play();
             manager.BellNotify(bellId);
             }
