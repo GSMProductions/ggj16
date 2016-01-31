@@ -22,7 +22,7 @@ public class BrokenBallManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            if(manager.current_puzzle == 4) {
+            if(manager.current_puzzle == 4 && !explode) {
 
                 if(stuckTrigger.object_in != null){
                     begin = true;
