@@ -7,12 +7,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
+    100004: Cube_Cube.008_Pedestal
     400000: default
     400002: //RootNode
+    400004: Cube_Cube.008_Pedestal
     2300000: default
+    2300002: Cube_Cube.008_Pedestal
     3300000: default
+    3300002: Cube_Cube.008_Pedestal
     4300000: default
+    4300002: Cube_Cube.008_Pedestal
     6400000: default
+    6400002: Cube_Cube.008_Pedestal
   materials:
     importMaterials: 1
     materialName: 0

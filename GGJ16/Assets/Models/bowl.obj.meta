@@ -7,11 +7,21 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: default
+    100004: bowl_Circle_Bowl
+    100006: water_Circle.001_Water
     400000: //RootNode
     400002: default
+    400004: bowl_Circle_Bowl
+    400006: water_Circle.001_Water
     2300000: default
+    2300002: bowl_Circle_Bowl
+    2300004: water_Circle.001_Water
     3300000: default
+    3300002: bowl_Circle_Bowl
+    3300004: water_Circle.001_Water
     4300000: default
+    4300002: bowl_Circle_Bowl
+    4300004: water_Circle.001_Water
     6400000: default
   materials:
     importMaterials: 1
