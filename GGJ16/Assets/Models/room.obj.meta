@@ -7,12 +7,24 @@ ModelImporter:
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
+    100004: Room_Cube.001_Floor
+    100006: Room_Cube.001_Wall
     400000: default
     400002: //RootNode
+    400004: Room_Cube.001_Floor
+    400006: Room_Cube.001_Wall
     2300000: default
+    2300002: Room_Cube.001_Floor
+    2300004: Room_Cube.001_Wall
     3300000: default
+    3300002: Room_Cube.001_Floor
+    3300004: Room_Cube.001_Wall
     4300000: default
+    4300002: Room_Cube.001_Floor
+    4300004: Room_Cube.001_Wall
     6400000: default
+    6400002: Room_Cube.001_Floor
+    6400004: Room_Cube.001_Wall
   materials:
     importMaterials: 1
     materialName: 0
