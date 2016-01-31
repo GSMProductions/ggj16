@@ -6,6 +6,7 @@ public class Grab : MonoBehaviour {
 public const string GRABABLE_TAG = "grabable";
 public Transform object_grabable = null;
 Quaternion originalRotation = Quaternion.identity;
+public bool on_grab = false;
 
     void Update() {
         if(Input.GetMouseButton(0)) {
@@ -43,6 +44,7 @@ Quaternion originalRotation = Quaternion.identity;
         }
         object_grabable.parent = transform;
         object_grabable.position = transform.position;
+        on_grab = true;
     }
 
     private void unGrab() {
@@ -53,5 +55,6 @@ Quaternion originalRotation = Quaternion.identity;
         catch{
         }
         object_grabable.parent = null;
+        on_grab = false;
     }
 }
