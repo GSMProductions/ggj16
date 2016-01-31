@@ -16,6 +16,7 @@ public class BellsManager : MonoBehaviour {
     public Bell[] other_bells;
 
     public bool complete = false;
+    public GameObject bowl;
 
     // Use this for initialization
     void Start () {
@@ -43,6 +44,7 @@ public class BellsManager : MonoBehaviour {
         }
     else{
        animator.SetBool("Start", true);
+       bowl.SetActive(true);
     }
 
 	}
