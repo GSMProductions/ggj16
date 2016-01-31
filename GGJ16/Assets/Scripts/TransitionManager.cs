@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using System.Collections;
 
 public class TransitionManager : MonoBehaviour {
@@ -11,6 +12,8 @@ public class TransitionManager : MonoBehaviour {
 
     private float timer;
     public int current_puzzle = 1;
+
+    public AudioMixerSnapshot[] bgm;
 
     void Start() {
         
@@ -31,12 +34,15 @@ public class TransitionManager : MonoBehaviour {
         switch (puzzle) {
             case 1:
                 backdrops_left = 3;
+                bgm[1].TransitionTo(5.0f);
                 break;
             case 2:
                 backdrops_left = 2;
+                bgm[2].TransitionTo(5.0f);
                 break;
             case 3:
                 backdrops_left = 1;
+                bgm[3].TransitionTo(5.0f);
                 break;
         }
         for (int i = 0; i < backdrops_left; i++) {
