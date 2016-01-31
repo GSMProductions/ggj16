@@ -9,22 +9,28 @@ ModelImporter:
     100002: //RootNode
     100004: Room_Cube.001_Floor
     100006: Room_Cube.001_Wall
+    100008: Room_Cube.001_Ceiling
     400000: default
     400002: //RootNode
     400004: Room_Cube.001_Floor
     400006: Room_Cube.001_Wall
+    400008: Room_Cube.001_Ceiling
     2300000: default
     2300002: Room_Cube.001_Floor
     2300004: Room_Cube.001_Wall
+    2300006: Room_Cube.001_Ceiling
     3300000: default
     3300002: Room_Cube.001_Floor
     3300004: Room_Cube.001_Wall
+    3300006: Room_Cube.001_Ceiling
     4300000: default
     4300002: Room_Cube.001_Floor
     4300004: Room_Cube.001_Wall
+    4300006: Room_Cube.001_Ceiling
     6400000: default
     6400002: Room_Cube.001_Floor
     6400004: Room_Cube.001_Wall
+    6400006: Room_Cube.001_Ceiling
   materials:
     importMaterials: 1
     materialName: 0

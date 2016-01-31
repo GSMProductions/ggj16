@@ -15,6 +15,8 @@ public class TransitionManager : MonoBehaviour {
 
     public AudioMixerSnapshot[] bgm;
 
+    public AudioSource stone;
+
     void Start() {
         
     }
@@ -39,10 +41,12 @@ public class TransitionManager : MonoBehaviour {
             case 2:
                 backdrops_left = 2;
                 bgm[2].TransitionTo(5.0f);
+                stone.Play();
                 break;
             case 3:
                 backdrops_left = 1;
                 bgm[3].TransitionTo(5.0f);
+                stone.Play();
                 break;
         }
         for (int i = 0; i < backdrops_left; i++) {

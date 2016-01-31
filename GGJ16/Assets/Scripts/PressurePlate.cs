@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (AudioSource))]
 public class PressurePlate : MonoBehaviour {
 
     public bool pressed = false;
@@ -26,6 +27,7 @@ public class PressurePlate : MonoBehaviour {
             if (p2manager != null) {
                 p2manager.Notify(this);
             }
+            GetComponent<AudioSource>().Play();
         }
     }
 

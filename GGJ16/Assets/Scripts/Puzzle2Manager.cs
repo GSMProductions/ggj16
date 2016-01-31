@@ -11,14 +11,18 @@ public class Puzzle2Manager : MonoBehaviour {
     public Animation[] to_rise;
 
     public PressurePlate[] sequence;
+    public PressurePlate[] all_plates;
 
     public PressurePlate[] entered_sequence;
     private int number_pressed = 0;
 
+    public AudioSource sfxok;
+    public AudioSource sfxko;
+
     // Use this for initialization
     void Start () {
        manager = GameObject.Find("TransitionManager").GetComponent<TransitionManager>();
-        foreach (PressurePlate plate in sequence) {
+        foreach (PressurePlate plate in all_plates) {
             plate.p2manager = this;
         }
         entered_sequence = new PressurePlate[sequence.Length];
@@ -31,6 +35,7 @@ public class Puzzle2Manager : MonoBehaviour {
         }
         if (initial_location.object_in == null && !started) {
             started = true;
+            manager.stone.Play();
             foreach(Animation rise in to_rise) {
                 rise.Play();
             }
@@ -39,6 +44,7 @@ public class Puzzle2Manager : MonoBehaviour {
 
     public void Notify(PressurePlate plate) {
         entered_sequence[number_pressed] = plate;
+        sfxok.Play();
         number_pressed += 1;
         for (int i = 0; i < number_pressed; i++) {
             if (entered_sequence[i] != sequence[i]) {
@@ -49,6 +55,7 @@ public class Puzzle2Manager : MonoBehaviour {
                 } else {
                     entered_sequence = new PressurePlate[sequence.Length];
                     number_pressed = 0;
+                    sfxko.Play();
                 }
                 return;
             }
