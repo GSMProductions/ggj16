@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BellsDown
+  m_Name: Plate_up
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,35 +18,40 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 0, y: -0.6, z: 0}
-        inSlope: {x: 0, y: -7.5847163, z: 0}
-        outSlope: {x: 0, y: -7.5847163, z: 0}
+        value: {x: -1.8, y: 8.36, z: 5.910625}
+        inSlope: {x: 0, y: 1.0575765, z: 0}
+        outSlope: {x: 0, y: 1.0575765, z: 0}
         tangentMode: 0
-      - time: 0.33333334
-        value: {x: 0, y: -3.128239, z: 0}
-        inSlope: {x: 0, y: -4.446179, z: 0}
-        outSlope: {x: 0, y: -4.446179, z: 0}
+      - time: 6.0833335
+        value: {x: -1.8, y: 14.793591, z: 5.910625}
+        inSlope: {x: 0, y: 1.955585, z: 0}
+        outSlope: {x: 0, y: 1.955585, z: 0}
         tangentMode: 0
-      - time: 1
-        value: {x: 0, y: -4, z: 0}
-        inSlope: {x: 0, y: -1.3076417, z: 0}
-        outSlope: {x: 0, y: -1.3076417, z: 0}
+      - time: 7.3333335
+        value: {x: -1.8, y: 18.360582, z: 5.910625}
+        inSlope: {x: 0, y: 2.8535933, z: 0}
+        outSlope: {x: 0, y: 2.8535933, z: 0}
+        tangentMode: 0
+      - time: 7.9166665
+        value: {x: -1.8, y: 18.360582, z: 5.910625}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: 
+    path: Pressures plates
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
-  m_SampleRate: 36
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
+    - path: 116912661
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -58,7 +63,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 7.9166665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,37 +83,12 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -0.6
-        inSlope: -7.5847163
-        outSlope: -7.5847163
-        tangentMode: 10
-      - time: 0.33333334
-        value: -3.128239
-        inSlope: -4.446179
-        outSlope: -4.446179
-        tangentMode: 10
-      - time: 1
-        value: -4
-        inSlope: -1.3076417
-        outSlope: -1.3076417
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: 
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
+        value: -1.8
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 1
-        value: 0
+      - time: 7.9166665
+        value: -1.8
         inSlope: 0
         outSlope: 0
         tangentMode: 10
@@ -116,19 +96,44 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: 
+    path: Pressures plates
     classID: 4
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
+        value: 8.36
+        inSlope: 1.0575765
+        outSlope: 1.0575765
+        tangentMode: 10
+      - time: 6.0833335
+        value: 14.793591
+        inSlope: 1.955585
+        outSlope: 1.955585
+        tangentMode: 10
+      - time: 7.3333335
+        value: 18.360582
+        inSlope: 2.8535933
+        outSlope: 2.8535933
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Pressures plates
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.910625
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 1
-        value: 0
+      - time: 7.9166665
+        value: 5.910625
         inSlope: 0
         outSlope: 0
         tangentMode: 10
@@ -136,11 +141,11 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: 
+    path: Pressures plates
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 1
+  m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events: []

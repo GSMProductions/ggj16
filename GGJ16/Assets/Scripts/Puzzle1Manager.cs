@@ -5,7 +5,7 @@ public class Puzzle1Manager : MonoBehaviour {
 
     public Stuck stuck;
     public TransitionManager manager;
-    private bool complete = false;
+    public bool complete = false;
 
 	// Use this for initialization
 	void Start () {

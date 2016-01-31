@@ -5,7 +5,7 @@ public class Puzzle2Manager : MonoBehaviour {
 
     public Stuck initial_location;
     public TransitionManager manager;
-    private bool complete = false;
+    public bool complete = false;
 
     private bool started = false;
     public Animation[] to_rise;

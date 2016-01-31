@@ -7,16 +7,21 @@ public class BellsManager : MonoBehaviour {
     public Bell firstBell;
     public Bell secondBell;
     public Bell thridBell;
-
+    Animator animator;
     public bool first = false;
     public bool second = false;
     public bool third = false;
-
+    public TransitionManager manager;
     public bool ok = false;
     public Bell[] other_bells;
 
+    public bool complete = false;
+    public GameObject bowl;
+
     // Use this for initialization
     void Start () {
+        animator = GetComponent<Animator>();
+        manager = GameObject.Find("TransitionManager").GetComponent<TransitionManager>();
        firstBell.manager = this;
        firstBell.bellId = 1;
 
@@ -34,7 +39,14 @@ public class BellsManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	if (complete || manager.current_puzzle != 3) {
+        return;
+        }
+    else{
+       animator.SetBool("Start", true);
+       bowl.SetActive(true);
+    }
+
 	}
 
     public void BellNotify(int id) {
@@ -42,6 +54,9 @@ public class BellsManager : MonoBehaviour {
             if (second && id == 3) {
                 third = true;
                 ok = true;
+                manager.LevelComplete(3);
+                animator.SetBool("Start", false);
+                bowl.SetActive(false);
             }
             else if (first && id == 2 && !second){
                 second = true;
