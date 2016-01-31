@@ -54,6 +54,9 @@ public class BellsManager : MonoBehaviour {
             if (second && id == 3) {
                 third = true;
                 ok = true;
+                manager.LevelComplete(3);
+                animator.SetBool("Start", false);
+                bowl.SetActive(false);
             }
             else if (first && id == 2 && !second){
                 second = true;

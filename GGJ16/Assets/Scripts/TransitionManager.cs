@@ -35,6 +35,9 @@ public class TransitionManager : MonoBehaviour {
             case 2:
                 backdrops_left = 2;
                 break;
+            case 3:
+                backdrops_left = 1;
+                break;
         }
         for (int i = 0; i < backdrops_left; i++) {
             StartCoroutine(DelayRemoveBackdrop(timings[i+backdrops_removed], i+backdrops_removed));
