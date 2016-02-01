@@ -23,7 +23,6 @@ public class TransitionManager : MonoBehaviour {
     
     IEnumerator DelayRemoveBackdrop(float delay, int backdrop) {
         yield return new WaitForSeconds(delay);
-        print("Go!");
         backdrops[backdrop].remove_object = true;
     }
 	
@@ -48,6 +47,14 @@ public class TransitionManager : MonoBehaviour {
                 bgm[3].TransitionTo(5.0f);
                 stone.Play();
                 break;
+            case 4:
+                backdrops_left = 3;
+                bgm[4].TransitionTo(5.0f);
+                break;
+            case 5:
+                backdrops_left = 2;
+                bgm[5].TransitionTo(2.0f);
+                break;                
         }
         for (int i = 0; i < backdrops_left; i++) {
             StartCoroutine(DelayRemoveBackdrop(timings[i+backdrops_removed], i+backdrops_removed));

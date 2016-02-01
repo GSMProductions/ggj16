@@ -13,7 +13,7 @@ public class BrokenBallManager : MonoBehaviour {
     public Grab grab;
     public Stuck stuckTrigger;
     public TransitionManager manager;
-
+    bool complete = false;
 
 	// Use this for initialization
 	void Start () {
@@ -48,24 +48,23 @@ public class BrokenBallManager : MonoBehaviour {
                 explode = true;
             }
         if (explode && begin && grab.on_grab) {
-            print("You can Assemble");
             GetComponent<Collider>().enabled = true;
         }
     }
 
     public void AddPiece () {
         if(index >= 0 && index < 3) {
-            print("remove old");
             partOfBall[index].SetActive(false);
         }
         index++;
         if(index < partOfBall.Length){
-            print("add piece: " + partOfBall[index].name);
             partOfBall[index].SetActive(true);
         }
-        else{
+        else if (!complete) {
             GetComponent<Collider>().enabled = false;
             stuckTrigger.gameObject.SetActive(true);
+            manager.LevelComplete(4);
+            complete = true;
         }
     }
 }
