@@ -14,6 +14,9 @@ public class BellsManager : MonoBehaviour {
     public TransitionManager manager;
     public bool ok = false;
     public Bell[] other_bells;
+    public Animation[] to_rise;
+    public Animation[] to_plunge;
+    bool started = false;
 
     public bool complete = false;
     public GameObject bowl;
@@ -39,13 +42,18 @@ public class BellsManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (complete || manager.current_puzzle != 3) {
-        return;
+        if (complete || manager.current_puzzle != 3) {
+            return;
+        } else{
+            animator.SetBool("Start", true);
+            bowl.SetActive(true);
+            if (!started) {
+                started = true;
+                foreach (Animation rise in to_rise) {
+                    rise.Play();
+                }
+            }
         }
-    else{
-       animator.SetBool("Start", true);
-       bowl.SetActive(true);
-    }
 
 	}
 
@@ -57,6 +65,9 @@ public class BellsManager : MonoBehaviour {
                 manager.LevelComplete(3);
                 animator.SetBool("Start", false);
                 bowl.SetActive(false);
+                foreach(Animation plunge in to_plunge) {
+                    plunge.Play();
+                }
             }
             else if (first && id == 2 && !second){
                 second = true;
