@@ -1,9 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Puzzle1Manager : MonoBehaviour {
 
-    public Stuck stuck;
     public TransitionManager manager;
     public bool complete = false;
 
@@ -11,12 +10,15 @@ public class Puzzle1Manager : MonoBehaviour {
 	void Start () {
 	   manager = GameObject.Find("TransitionManager").GetComponent<TransitionManager>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	    if (stuck.object_in != null && !complete) {
+
+    public void CentralPedestalObjectIn(GameObject obj) {
+        if (manager.current_puzzle != 1) {
+            return;
+        }
+
+        if (!complete) {
             manager.LevelComplete(1);
             complete = true;
         }
-	}
+    }
 }

@@ -2566,7 +2566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2247cb1483ea4642b29dfe086a257a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stuck: {fileID: 1073343348}
   manager: {fileID: 1164147621}
   complete: 0
 --- !u!4 &313409711
@@ -3317,6 +3316,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!1 &479049192
 GameObject:
@@ -7278,6 +7287,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!65 &1170339266
 BoxCollider:
@@ -9648,6 +9667,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!65 &1430349292
 BoxCollider:
@@ -9674,6 +9703,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 313409711}
     m_Modifications:
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 458632, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9721,6 +9754,26 @@ Prefab:
     - target: {fileID: 103192, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313409710}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CentralPedestalObjectIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
@@ -11776,6 +11829,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!65 &1912962193
 BoxCollider:

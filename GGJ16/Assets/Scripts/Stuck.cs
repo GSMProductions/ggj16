@@ -1,7 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class Stuck : MonoBehaviour {
+
+    [System.Serializable]
+    public class GameObjectCallback : UnityEvent<GameObject> {}
+
+    public GameObjectCallback gameObjectIn;
+    public UnityEvent gameObjectOut;
 
     public const string GRABABLE_TAG = "grabable";
     public Transform object_in = null;
@@ -23,12 +30,14 @@ public class Stuck : MonoBehaviour {
             object_in.GetComponent<Rigidbody>().useGravity = false;
             object_in.GetComponent<Rigidbody>().velocity = Vector3.zero;
             object_in.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            gameObjectIn.Invoke(object_in.gameObject);
         }
     }
 
     void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == GRABABLE_TAG) {
             object_in = null;
+            gameObjectOut.Invoke();
         }
     }
 }

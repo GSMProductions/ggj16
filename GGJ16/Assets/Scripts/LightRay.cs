@@ -28,7 +28,6 @@ public class LightRay : MonoBehaviour {
         bool found = false;
         for (int i = 0; i < placements.Length; i++) {
             if (placements[i].object_in != null) {
-                print(placements[i].object_in);
                 ray_target = targets[i];
                 found = true;
             }
@@ -39,7 +38,6 @@ public class LightRay : MonoBehaviour {
 
         if(Physics.Raycast(ray, out hit, 100)) {
             line.SetPosition(1, hit.point);
-            Debug.DrawLine(transform.position, hit.point, Color.red);
             if (hit.collider.gameObject.tag == "grabable") {
                 if (ray_target) {
                     line_from_sphere.enabled = true;   
