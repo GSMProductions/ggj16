@@ -413,12 +413,91 @@ Transform:
   m_Children: []
   m_Father: {fileID: 485694295}
   m_RootOrder: 3
+--- !u!1 &138060252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 138060255}
+  - 95: {fileID: 138060254}
+  - 114: {fileID: 138060253}
+  m_Layer: 0
+  m_Name: UpDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &138060253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138060252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7cd804ba8d540baa76c3cc6b9f172f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &138060254
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138060252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8166dfe97f01943d7af5b923fab4dccf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &138060255
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138060252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 36633428}
+  m_Father: {fileID: 313409711}
+  m_RootOrder: 0
 --- !u!114 &142143681 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47,
     type: 2}
   m_PrefabInternal: {fileID: 484738087}
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
+--- !u!1 &146025974 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 163238, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+  m_PrefabInternal: {fileID: 1451703256}
+--- !u!95 &146025975
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146025974}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8166dfe97f01943d7af5b923fab4dccf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &174989274
 Prefab:
   m_ObjectHideFlags: 0
@@ -2568,6 +2647,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 1164147621}
   complete: 0
+  on_started:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 138060253}
+        m_MethodName: SetParameterUp
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &313409711
 Transform:
   m_ObjectHideFlags: 0
@@ -2578,7 +2673,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 36633428}
+  - {fileID: 138060255}
   m_Father: {fileID: 702102526}
   m_RootOrder: 2
 --- !u!1001 &313963970
@@ -3316,15 +3411,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectOut:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   gameObjectIn:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!1 &479049192
@@ -3336,6 +3431,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 479049194}
   - 111: {fileID: 479049193}
+  - 95: {fileID: 479049195}
   m_Layer: 0
   m_Name: Moving
   m_TagString: Untagged
@@ -3354,6 +3450,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: e633c6cf7a3210d478f2f6ababb11316, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: e633c6cf7a3210d478f2f6ababb11316, type: 2}
+  - {fileID: 0}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -3382,6 +3479,23 @@ Transform:
   - {fileID: 982188461}
   m_Father: {fileID: 1671718361}
   m_RootOrder: 3
+--- !u!95 &479049195
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479049192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8166dfe97f01943d7af5b923fab4dccf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &484429980
 Prefab:
   m_ObjectHideFlags: 0
@@ -5837,6 +5951,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 702102526}
     m_Modifications:
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectOut.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 458632, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5900,6 +6018,30 @@ Prefab:
     - target: {fileID: 103192, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: m_Name
       value: TargetFinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 163238, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: m_Name
+      value: Back pedestal
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectOut.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectOut.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectOut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313409710}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectOut.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BallRemovedFromBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
+      propertyPath: gameObjectOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
@@ -7287,15 +7429,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectOut:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   gameObjectIn:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!65 &1170339266
@@ -9667,15 +9809,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectOut:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   gameObjectIn:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!65 &1430349292
@@ -9701,7 +9843,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 313409711}
+    m_TransformParent: {fileID: 138060255}
     m_Modifications:
     - target: {fileID: 11412296, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: gameObjectIn.m_PersistentCalls.m_Calls.Array.size
@@ -9741,7 +9883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 163238, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: m_Name
-      value: pedestal
+      value: Central pedestal
       objectReference: {fileID: 0}
     - target: {fileID: 2340596, guid: bd701ad0e32e28d48b459e98b13d7f47, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -11829,15 +11971,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751f26513a87e469b4eebd0dbb94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectOut:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   gameObjectIn:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Stuck+GameObjectCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  gameObjectOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   object_in: {fileID: 0}
 --- !u!65 &1912962193
