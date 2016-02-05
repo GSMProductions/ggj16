@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class Puzzle5Manager : MonoBehaviour {
@@ -7,17 +8,26 @@ public class Puzzle5Manager : MonoBehaviour {
     public TransitionManager manager;
     public bool complete = false;
 
+    public UnityEvent on_started;
+    bool started = false;
+
 	// Use this for initialization
 	void Start () {
 	   manager = GameObject.Find("TransitionManager").GetComponent<TransitionManager>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	    if ((manager.current_puzzle == 5) && (stuck.object_in != null) && (!complete)) {
-            print("Level 5 done");
-            manager.LevelComplete(5);
-            complete = true;
+
+    public void BallTakenFromCenter() {
+        if (manager.current_puzzle == 5 && !started) {
+            started = true;
+            on_started.Invoke();
         }
-	}
+    }
+	
+    public void BallInTheBack() {
+        if (manager.current_puzzle == 5 && !complete) {
+            complete = true;
+            manager.LevelComplete(5);
+        }
+    }
+
 }

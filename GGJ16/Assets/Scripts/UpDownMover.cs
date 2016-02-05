@@ -14,4 +14,18 @@ public class UpDownMover : MonoBehaviour {
     public void SetParameterUp(bool val) {
         animator.SetBool("Up", val);
     }
+
+    IEnumerator DelaySetParameterUp(float delay, bool val) {
+        yield return new WaitForSeconds(delay);
+        animator.SetBool("Up", val);
+    }
+
+    public void DelayUp(float delay) {
+        StartCoroutine(DelaySetParameterUp(delay, true));
+    }
+
+    public void DelayDown(float delay) {
+        StartCoroutine(DelaySetParameterUp(delay, false));
+    }    
+
 }

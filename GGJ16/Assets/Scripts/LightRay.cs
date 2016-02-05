@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class LightRay : MonoBehaviour {
@@ -15,9 +16,18 @@ public class LightRay : MonoBehaviour {
 
     public Stuck[] placements;
 
+    public UnityEvent on_first_shine;
+    public UnityEvent on_second_shine;
+    bool first_shine = false;
+    bool second_shine = false;
+
     // Use this for initialization
     void Start () {
         line_from_sphere.enabled = false;
+        Ray ray = new Ray(transform.position, transform.forward);
+        line.SetPosition(0, ray.origin);
+        Vector3 endPoint = transform.position + transform.forward * 100000;
+        line.SetPosition(1, endPoint);
     }
     
     // Update is called once per frame
@@ -43,10 +53,21 @@ public class LightRay : MonoBehaviour {
                     line_from_sphere.enabled = true;   
                     line_from_sphere.SetPosition(0, hit.collider.transform.position);
                     line_from_sphere.SetPosition(1, ray_target.position);
+                    if (ray_target == targets[0] && !first_shine) {
+                        on_first_shine.Invoke();
+                        first_shine = true;
+                    } else if (ray_target != null && ray_target != targets[0] && !second_shine) {
+                        on_second_shine.Invoke();
+                        second_shine = true;
+                    }
+
                 }
             } else {
                 line_from_sphere.enabled = false;
             }              
+        } else {
+            Vector3 endPoint = transform.position + transform.forward * 100000;
+            line.SetPosition(1, endPoint);
         }
 
 	}

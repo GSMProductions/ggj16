@@ -15,10 +15,15 @@ public class MouseRotate : MonoBehaviour {
     private Quaternion fromRotation;
     private Quaternion toRotation;
 
+    void Start() {
+        xDeg = transform.rotation.eulerAngles.y;
+        yDeg = transform.rotation.eulerAngles.x;
+    }
+
     void Update () {
         if(Input.GetMouseButton(0) && GetComponent<InteractiveObject>().active) {
-            xDeg += Input.GetAxis("Mouse X") * speed * friction;
-            yDeg -= Input.GetAxis("Mouse Y") * speed * friction;
+            xDeg -= Input.GetAxis("Mouse X") * speed * friction;
+            yDeg += Input.GetAxis("Mouse Y") * speed * friction;
         }
         fromRotation = transform.rotation;
         toRotation = Quaternion.Euler(yDeg,xDeg,0);
