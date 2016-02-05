@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (AudioSource))]
+[RequireComponent (typeof (Collider))]
 public class RemoveDecor : MonoBehaviour {
     public bool remove_object = false;
     public Vector3 accelaration = Vector3.zero;
     public Vector3 accelaration_max = Vector3.zero;
     public Collider room_collider;
+
+    bool started = false;
 
     void Start() {
 
@@ -33,6 +37,10 @@ public class RemoveDecor : MonoBehaviour {
     void Update () {
 
         if (remove_object) {
+            if(!started) {
+                GetComponent<AudioSource>().Play();
+                started = true;
+            }
             UpdateVelocity();
         }
         else {

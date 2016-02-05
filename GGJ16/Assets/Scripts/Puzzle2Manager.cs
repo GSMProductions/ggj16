@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class Puzzle2Manager : MonoBehaviour {
@@ -18,6 +19,8 @@ public class Puzzle2Manager : MonoBehaviour {
 
     public AudioSource sfxok;
     public AudioSource sfxko;
+
+    public UnityEvent on_started;
 
     // Use this for initialization
     void Start () {
