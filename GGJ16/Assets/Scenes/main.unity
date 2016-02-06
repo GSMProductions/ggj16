@@ -4329,6 +4329,11 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11423710, guid: 63dc270a0f51260429cb001aba051e09, type: 2}
+      propertyPath: audio_group
+      value: 
+      objectReference: {fileID: 24330950, guid: 28db7a11b2ef31b49973d9dd8603c2df,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63dc270a0f51260429cb001aba051e09, type: 2}
   m_IsPrefabParent: 0
@@ -10098,6 +10103,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e37a9d976550bff4e8b7b5b6fa5285cd, type: 2}
+    - target: {fileID: 400000, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04abedaa4f534b448a04b895c28bab07, type: 3}
   m_IsPrefabParent: 0
@@ -10371,8 +10384,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7325139, z: 1}
-  m_Center: {x: 0, y: 0.32124776, z: 0}
+  m_Size: {x: 1, y: 0.2, z: 1}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!54 &1380312208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13545,7 +13558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  friction: 3
+  friction: 2
   lerpSpeed: 2
 --- !u!23 &2026786299
 MeshRenderer:
